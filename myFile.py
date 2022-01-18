@@ -165,3 +165,23 @@ while a<2000001:
     a+=2
 #The above while loop uses all the prime numbers below the square root of a number to determine whether it is a prime number of not, all even numbers greater than 2 are skipped because they cannot be prime numbers
 print(ans)
+
+#####################################################Seventh Work Session#####################################################
+#Project Euler Problem 12
+def divisor(n):
+    x=0
+    for i in range(1,n+1):
+        if n%i==0:
+            x+=1
+    return x
+#The above function finds the number of divisors for one number
+a=1
+b=1
+d=0
+while d==0:
+    a+=1
+    b+=a
+    if divisor(b)>500:
+        print(b)
+        d=1
+#The above while loop calculates traingular numbers starting from 1 and find the first one of them that has the number of divisors greater than 500
