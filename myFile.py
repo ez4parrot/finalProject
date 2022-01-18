@@ -95,3 +95,24 @@ sumsquare=i**2
 ans=abs(sumsquare-squaresum)
 #After calculating the sum of the square and the square of the sum, we calculate their difference using absolute value
 print(ans)
+
+#####################################################Fourth Work Session#####################################################
+#Project Euler Problem 7
+count=1
+prime=[2]
+a=3
+while count!=10001:
+    temp=0
+    for i in prime:
+        #if a divides any prime numbers smaller than a, it is not a prime number
+        if a%i==0:
+            temp=1
+    if temp==0:
+        prime.append(a)
+        count+=1
+        #if a is a prime, we add it to the prime list and add 1 to count
+    a+=2
+        #each time we add 2 to a because a prime number greater than 2 can only be odd, so we don't need to consider even numbers
+a=a-2
+#After the while loop, a is 2 greater than the 10001st prime number, so we subtract it by 2
+print(a)
