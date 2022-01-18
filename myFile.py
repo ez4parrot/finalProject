@@ -66,3 +66,32 @@ for a in range(100,999):
                     ans=temp
 #The above code first determines if the product of two 3-digit numbers is 5-digit or 6-digit, and then determines if it is a palindrome number. If it is and it is greater than our previous answer, it becomes the new answer
 print(ans)
+
+#####################################################Third Work Session#####################################################
+#Project Euler Problem 5
+#The smallest common multiple of numbers from 1 to 20 can be found by multiplying the largest power of every prime numbers less than 20 that is a factor of one of the numbers in the range 1 to 20
+#The greatest power of 2 that is a factor of a number between 1 to 20 is 4: 16=2^4
+#The greatest power of 3 that is a factor of a number between 1 to 20 is 2: 9=3^2 18=2*3^2
+#The greatest power of 5 that is a factor of a number between 1 to 20 is 1: 5=5^1 10=5^1*2 15=5^1*3 20=5^1*2^2
+#The greatest power of 7 that is a factor of a number between 1 to 20 is 1: 7=7^1 14=7^1*2
+#The greatest power of 11 that is a factor of a number between 1 to 20 is 1: 11=11^1
+#The greatest power of 13 that is a factor of a number between 1 to 20 is 1: 13=13^1
+#The greatest power of 17 that is a factor of a number between 1 to 20 is 4: 17=17^1
+#The greatest power of 19 that is a factor of a number between 1 to 20 is 4: 19=19^1
+#Thus, the smallest common multiple of numbers from 1 to 20 is 2^4*3^2*5*7*11*13*17*19
+
+a=(2**4)*(3**2)*5*7*11*13*17*19
+print(a)
+
+#Project Euler Problem 6
+squaresum=0
+sumsquare=0
+sum=0
+for i in range(1,100):
+    squaresum+=i**2
+    sum+=i
+#The for loop calculates the sum of the square of the numbers and also the sum of the number
+sumsquare=i**2
+ans=abs(sumsquare-squaresum)
+#After calculating the sum of the square and the square of the sum, we calculate their difference using absolute value
+print(ans)
