@@ -138,3 +138,30 @@ for i in zeroes:
 #We find all possible sets of 13 adjacent numbers between each 0s and find the biggest product
 print(ans)
 
+#####################################################Sixth Work Session#####################################################
+#Project Euler Problem 9
+for i in range(334,998):
+    for j in range (1,1000-i-1):
+        if ((j**2+(1000-i-j)**2)==i**2):
+            ans=j*i*(1000-j-i)
+#The above for loop tries all possible sets of a,b,c and find the set that satisfies a^2+b^2=c^2, and gives the valur of a*b*c to ans
+print(ans)
+
+#Project Euler Problem 10
+import math
+prime=[2]
+a=3
+ans=2
+while a<2000001:
+    d=0
+    for i in prime:
+        if i>math.sqrt(a):
+            break
+        if a%i==0:
+            d=1
+    if d==0:
+        prime.append(a)
+        ans+=a
+    a+=2
+#The above while loop uses all the prime numbers below the square root of a number to determine whether it is a prime number of not, all even numbers greater than 2 are skipped because they cannot be prime numbers
+print(ans)
